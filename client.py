@@ -1,49 +1,41 @@
-import asyncio
-from typing import Optional
-
-import aiohttp
+import json
+import trio
+import trio_websocket
+from trio_websocket import open_websocket_url
 
 import config
 
+async def receive_messages():
+    async with open_websocket_url(f"ws://{config.SERVER_HOST}:{config.SERVER_PORT}/connect") as ws:
+        async for msg in ws:
+            if msg.type == trio_websocket.MessageType.text:
+                data = json.loads(msg.data)
+                print("Received message:", data)
+            elif msg.type == trio_websocket.MessageType.close:
+                break
 
-async def receive_messages() -> None:
-    async with aiohttp.ClientSession() as session:
-        async with session.ws_connect(f"{config.SERVER_URL}/connect") as ws:
-            async for msg in ws:
-                if msg.type == aiohttp.WSMsgType.TEXT:
-                    data = msg.json()
-                    print("Received message:", data)
-                elif msg.type == aiohttp.WSMsgType.ERROR:
-                    break
-
-
-async def send_message(message: str, recipient: Optional[str] = None, comment: Optional[str] = None,
-                       file_path: Optional[str] = None) -> None:
+async def send_message(message, recipient=None, comment=None, file_path=None):
     data = {"message": message}
     if recipient:
         data["recipient"] = recipient
     if comment:
         data["comment"] = comment
-    async with aiohttp.ClientSession() as session:
-        if file_path:
-            with open(file_path, 'rb') as file:
-                data["file"] = aiohttp.FormData()
-                data["file"].add_field('file', file.read(), filename=file_path)
-            async with session.post(f"{config.SERVER_URL}/upload", data=data["file"]) as response:
-                print(await response.text())
-        else:
-            async with session.ws_connect(f"{config.SERVER_URL}/connect") as ws:
-                await ws.send_json(data)
 
+    async with open_websocket_url(f"ws://{config.SERVER_HOST}:{config.SERVER_PORT}/connect") as ws:
+        await ws.send_text(json.dumps(data))
 
-async def main() -> None:
-    tasks = []
-    if config.CLIENT_RECEIVE_MESSAGES:
-        tasks.append(receive_messages())
-    tasks.append(send_message(config.CLIENT_SEND_MESSAGE, recipient=config.CLIENT_SEND_RECIPIENT,
-                              comment=config.CLIENT_SEND_COMMENT, file_path=config.CLIENT_SEND_FILE_PATH))
-    await asyncio.gather(*tasks)
+async def main():
+    async with trio.open_nursery() as nursery:
+        if config.CLIENT_RECEIVE_MESSAGES:
+            nursery.start_soon(receive_messages)
 
+        send_message_args = (
+            config.CLIENT_SEND_MESSAGE,
+            config.CLIENT_SEND_RECIPIENT,
+            config.CLIENT_SEND_COMMENT,
+            config.CLIENT_SEND_FILE_PATH
+        )
+        nursery.start_soon(send_message, *send_message_args)
 
 if __name__ == '__main__':
-    asyncio.run(main())
+    trio.run(main)
