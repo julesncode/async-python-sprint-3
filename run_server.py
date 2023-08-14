@@ -1,11 +1,20 @@
-from aiohttp import web
+import asyncio
+import websockets
 
 import config
-from server import Chat, error_middleware, handle_connect, handle_upload
+from server import Chat
 
-app = web.Application(middlewares=[error_middleware])
 
-app.router.add_get('/connect', handle_connect)
-app.router.add_post('/upload', handle_upload)
+async def main():
+    server = Chat()
 
-web.run_app(app, host=config.SERVER_HOST, port=config.SERVER_PORT)
+    async with websockets.serve(
+            server.handle_client, host=config.SERVER_HOST, port=config.SERVER_PORT
+    ):
+        print(f"WebSocket server started on {config.SERVER_HOST}:{config.SERVER_PORT}")
+
+        await asyncio.Future()  # Keep the server running
+
+
+if __name__ == '__main__':
+    asyncio.run(main())

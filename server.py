@@ -47,16 +47,18 @@ class Chat:
         self.messages = [msg for msg in self.messages if current_time - msg["timestamp"] <= config.MESSAGE_LIFETIME]
 
     async def handle_upload(self, ws, data):
-        if "file" in data:
-            filename = data.get("filename", "unknown.txt")
-            content = data["file"].encode()  # Assuming the file content is sent as a base64-encoded string
+        file = data.get("file_upload", False)
+        if file:
+            content = data.get("file_content", None)
+            if content:
+                content = content.encode()  # Assuming the file content is sent as a base64-encoded string
 
-            # Process the uploaded file content or save it
-            # You can add your code here to handle the uploaded file
-
-            # Notify the client that the file upload was successful
-            response = {"status": "success", "message": "File uploaded successfully."}
-            await ws.send(json.dumps(response))
+                # Notify the client that the file upload was successful
+                response = {"status": "success", "message": "File uploaded successfully."}
+                await ws.send(json.dumps(response))
+            else:
+                response = {"status": "error", "message": "Problems with file contents."}
+                await ws.send(json.dumps(response))
         else:
             # No file in the request
             response = {"status": "error", "message": "No file uploaded."}
