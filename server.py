@@ -1,16 +1,14 @@
-import logging
 import json
 import time
+from typing import List, Dict
+
 import websockets
 
 import config
+from logger import setup_logger, get_logger
 
-logging.basicConfig(
-    level=logging.DEBUG,
-    format='%(asctime)s [%(levelname)s] [%(module)s:%(lineno)d] %(message)s',
-    filename='server.log',
-    filemode='a'
-)
+setup_logger('server.log')
+logger = get_logger('server')
 
 
 class Comment:
@@ -20,9 +18,15 @@ class Comment:
 
 
 class Chat:
-    def __init__(self):
+    def __init__(self, max_messages: int = 20, message_lifetime: int = 3600,
+                 max_message_size: int = 5 * 1024 * 1024, ban_duration: int = 4 * 3600):
         self.messages = []
         self.clients = set()
+        self.max_messages = max_messages
+        self.message_lifetime = message_lifetime
+        self.max_message_size = max_message_size
+        self.ban_duration = ban_duration
+        self.user_reports: Dict[str, int] = {}
 
     def add_client(self, client):
         self.clients.add(client)
@@ -35,8 +39,33 @@ class Chat:
         self.messages.append({"message": message, "sender": sender, "comments": [], "timestamp": timestamp})
         self.cleanup_messages()
 
+    def get_messages(self, n: int = 20) -> List[Dict]:
+        return self.messages[-n:]
+
+    def cleanup_messages(self):
+        current_time = int(time.time())
+        self.messages = [msg for msg in self.messages if current_time - msg["timestamp"] <= self.message_lifetime]
+
+    def is_user_banned(self, user: str) -> bool:
+        ban_time = self.user_reports.get(user, 0)
+        if ban_time > time.time():
+            return True
+        return False
+
+    def report_user(self, user: str):
+        if not self.is_user_banned(user):
+            self.user_reports[user] = self.user_reports.get(user, 0) + 1
+            if self.user_reports[user] >= 3:
+                self.ban_user(user)
+
+    def ban_user(self, user: str):
+        ban_time = time.time() + self.ban_duration
+        self.user_reports[user] = ban_time
+
     def add_comment(self, message: str, comment_text: str, sender: str):
         if message in self.messages:
+            if not self.is_user_banned(sender):
+                self.messages[message]["comments"].append(Comment(comment_text, sender))
             self.messages[message]["comments"].append(Comment(comment_text, sender))
         else:
             # Handle an invalid message index here, such as logging a warning or ignoring the comment
@@ -64,13 +93,12 @@ class Chat:
             response = {"status": "error", "message": "No file uploaded."}
             await ws.send(json.dumps(response))
 
-    async def handle_client(self, ws, path):
+    async def handle_client(self, ws):
         self.clients.add(ws)
         try:
             async for message in ws:
                 data = json.loads(message)
                 sender = ws.remote_address[0]
-                recipient = data.get("recipient")
                 msg_content = data.get("message")
                 comment = data.get("comment")
                 file_upload = data.get("file_upload")

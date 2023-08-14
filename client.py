@@ -5,6 +5,10 @@ import json
 import websockets
 
 import config
+from logger import setup_logger, get_logger
+
+setup_logger('server.log')
+logger = get_logger('server')
 
 
 async def receive_messages():
