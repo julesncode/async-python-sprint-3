@@ -1,3 +1,1 @@
-aiohttp==3.8.5
-trio==0.22.2
-trio-websocket
+websockets==11.0.3
