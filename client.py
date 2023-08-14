@@ -1,18 +1,17 @@
 import json
-import trio
-import trio_websocket
-from trio_websocket import open_websocket_url
+import asyncio
+import websockets
 
 import config
 
 async def receive_messages():
-    async with open_websocket_url(f"ws://{config.SERVER_HOST}:{config.SERVER_PORT}/connect") as ws:
-        async for msg in ws:
-            if msg.type == trio_websocket.MessageType.text:
-                data = json.loads(msg.data)
+    async with websockets.connect(f"ws://{config.SERVER_HOST}:{config.SERVER_PORT}/connect") as ws:
+        try:
+            async for message in ws:
+                data = json.loads(message)
                 print("Received message:", data)
-            elif msg.type == trio_websocket.MessageType.close:
-                break
+        except websockets.exceptions.ConnectionClosed as exc:
+            print(f"Connection closed unexpectedly: {exc}")
 
 async def send_message(message, recipient=None, comment=None, file_path=None):
     data = {"message": message}
@@ -21,21 +20,26 @@ async def send_message(message, recipient=None, comment=None, file_path=None):
     if comment:
         data["comment"] = comment
 
-    async with open_websocket_url(f"ws://{config.SERVER_HOST}:{config.SERVER_PORT}/connect") as ws:
-        await ws.send_text(json.dumps(data))
+    async with websockets.connect(f"ws://{config.SERVER_HOST}:{config.SERVER_PORT}/connect") as ws:
+        try:
+            await ws.send(json.dumps(data))
+        except websockets.exceptions.ConnectionClosed as exc:
+            print(f"Connection closed unexpectedly: {exc}")
 
 async def main():
-    async with trio.open_nursery() as nursery:
-        if config.CLIENT_RECEIVE_MESSAGES:
-            nursery.start_soon(receive_messages)
+    tasks = []
+    if config.CLIENT_RECEIVE_MESSAGES:
+        tasks.append(receive_messages())
 
-        send_message_args = (
-            config.CLIENT_SEND_MESSAGE,
-            config.CLIENT_SEND_RECIPIENT,
-            config.CLIENT_SEND_COMMENT,
-            config.CLIENT_SEND_FILE_PATH
-        )
-        nursery.start_soon(send_message, *send_message_args)
+    send_message_args = (
+        config.CLIENT_SEND_MESSAGE,
+        config.CLIENT_SEND_RECIPIENT,
+        config.CLIENT_SEND_COMMENT,
+        config.CLIENT_SEND_FILE_PATH
+    )
+    tasks.append(send_message(*send_message_args))
+
+    await asyncio.gather(*tasks)
 
 if __name__ == '__main__':
-    trio.run(main)
+    asyncio.run(main())
