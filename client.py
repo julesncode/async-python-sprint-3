@@ -7,7 +7,7 @@ import websockets
 import config
 from logger import setup_logger, get_logger
 
-setup_logger('server.log')
+setup_logger('client.log')
 logger = get_logger('server')
 
 
