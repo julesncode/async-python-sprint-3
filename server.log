@@ -1,0 +1,703 @@
+2023-08-14 03:57:41,201 [DEBUG] [proactor_events:630] Using proactor: IocpProactor
+2023-08-14 03:57:41,227 [INFO] [server:711] server listening on 127.0.0.1:8000
+2023-08-14 03:57:45,635 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 03:57:45,635 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 03:57:45,636 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 03:57:45,636 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 03:57:45,636 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 03:57:45,636 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 03:57:45,636 [DEBUG] [server:292] < Sec-WebSocket-Key: Ftn513uLztUY+6VL6M7l9g==
+2023-08-14 03:57:45,636 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 03:57:45,636 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 03:57:45,636 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 03:57:45,637 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 03:57:45,637 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 03:57:45,637 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 03:57:45,637 [DEBUG] [server:313] > Sec-WebSocket-Accept: em8b+3kBmvuYtduP/WLeMUWMJlI=
+2023-08-14 03:57:45,637 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 03:57:45,637 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 00:57:45 GMT
+2023-08-14 03:57:45,637 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 03:57:45,637 [INFO] [server:646] connection open
+2023-08-14 03:57:45,637 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 03:57:45,637 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 03:57:45,638 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 03:57:45,638 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 03:57:45,638 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 03:57:45,638 [DEBUG] [server:292] < Sec-WebSocket-Key: IvrgQ+itC+1C/qhMZ12thQ==
+2023-08-14 03:57:45,638 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 03:57:45,638 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 03:57:45,638 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 03:57:45,638 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 03:57:45,638 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 03:57:45,638 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 03:57:45,638 [DEBUG] [server:313] > Sec-WebSocket-Accept: xTdMAX0U0TemA1r/J1GR+BBGbd0=
+2023-08-14 03:57:45,638 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 03:57:45,638 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 00:57:45 GMT
+2023-08-14 03:57:45,638 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 03:57:45,638 [INFO] [server:646] connection open
+2023-08-14 03:57:45,638 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 03:57:45,639 [DEBUG] [protocol:1168] < TEXT '{"message": "Hello, everyone!", "comment": "This is a comment."}' [64 bytes]
+2023-08-14 03:57:45,640 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 03:57:45,640 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 03:57:45,640 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 03:57:45,640 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 03:57:45,640 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 03:57:45,641 [INFO] [server:268] connection closed
+2023-08-14 03:58:05,652 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 03:58:05,652 [DEBUG] [protocol:1174] > PING 71 ed 49 a7 [binary, 4 bytes]
+2023-08-14 03:58:05,652 [DEBUG] [protocol:1168] < PING 10 39 14 ff [binary, 4 bytes]
+2023-08-14 03:58:05,653 [DEBUG] [protocol:1174] > PONG 10 39 14 ff [binary, 4 bytes]
+2023-08-14 03:58:05,653 [DEBUG] [protocol:1168] < PONG 71 ed 49 a7 [binary, 4 bytes]
+2023-08-14 03:58:05,653 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 03:58:25,655 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 03:58:25,655 [DEBUG] [protocol:1174] > PING 'n@mo' [text, 4 bytes]
+2023-08-14 03:58:25,655 [DEBUG] [protocol:1168] < PING '_F`+' [text, 4 bytes]
+2023-08-14 03:58:25,655 [DEBUG] [protocol:1174] > PONG '_F`+' [text, 4 bytes]
+2023-08-14 03:58:25,656 [DEBUG] [protocol:1168] < PONG 'n@mo' [text, 4 bytes]
+2023-08-14 03:58:25,656 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 03:58:45,659 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 03:58:45,659 [DEBUG] [protocol:1174] > PING 96 e9 dc 56 [binary, 4 bytes]
+2023-08-14 03:58:45,660 [DEBUG] [protocol:1168] < PING 7a 37 32 aa [binary, 4 bytes]
+2023-08-14 03:58:45,660 [DEBUG] [protocol:1174] > PONG 7a 37 32 aa [binary, 4 bytes]
+2023-08-14 03:58:45,660 [DEBUG] [protocol:1168] < PONG 96 e9 dc 56 [binary, 4 bytes]
+2023-08-14 03:58:45,660 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 03:59:05,664 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 03:59:05,664 [DEBUG] [protocol:1174] > PING 60 8b a4 fb [binary, 4 bytes]
+2023-08-14 03:59:05,664 [DEBUG] [protocol:1168] < PING 5b 76 57 d3 [binary, 4 bytes]
+2023-08-14 03:59:05,665 [DEBUG] [protocol:1174] > PONG 5b 76 57 d3 [binary, 4 bytes]
+2023-08-14 03:59:05,665 [DEBUG] [protocol:1168] < PONG 60 8b a4 fb [binary, 4 bytes]
+2023-08-14 03:59:05,665 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 03:59:25,665 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 03:59:25,665 [DEBUG] [protocol:1174] > PING 0b 9d a9 e9 [binary, 4 bytes]
+2023-08-14 03:59:25,666 [DEBUG] [protocol:1168] < PING 29 f3 28 5e [binary, 4 bytes]
+2023-08-14 03:59:25,666 [DEBUG] [protocol:1174] > PONG 29 f3 28 5e [binary, 4 bytes]
+2023-08-14 03:59:25,666 [DEBUG] [protocol:1168] < PONG 0b 9d a9 e9 [binary, 4 bytes]
+2023-08-14 03:59:25,666 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 03:59:36,079 [INFO] [server:268] connection closed
+2023-08-14 03:59:36,079 [INFO] [server:763] server closing
+2023-08-14 03:59:36,079 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 03:59:36,079 [INFO] [server:804] server closed
+2023-08-14 03:59:36,079 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:01:19,433 [DEBUG] [proactor_events:630] Using proactor: IocpProactor
+2023-08-14 04:01:19,459 [INFO] [server:711] server listening on 127.0.0.1:8000
+2023-08-14 04:01:58,941 [INFO] [server:763] server closing
+2023-08-14 04:01:58,941 [INFO] [server:804] server closed
+2023-08-14 04:07:50,263 [DEBUG] [proactor_events:630] Using proactor: IocpProactor
+2023-08-14 04:07:50,290 [INFO] [server:711] server listening on 127.0.0.1:8000
+2023-08-14 04:07:55,619 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:07:55,620 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:07:55,621 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:07:55,621 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:07:55,621 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:07:55,621 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:07:55,621 [DEBUG] [server:292] < Sec-WebSocket-Key: rcbkvbfdXaPbJjmPKPvaaQ==
+2023-08-14 04:07:55,621 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:07:55,621 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:07:55,621 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:07:55,621 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:07:55,621 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:07:55,622 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:07:55,622 [DEBUG] [server:313] > Sec-WebSocket-Accept: Q4rp6ji9NQ2mOKrp3lnJzEwMiaE=
+2023-08-14 04:07:55,622 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:07:55,622 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:07:55 GMT
+2023-08-14 04:07:55,622 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:07:55,622 [INFO] [server:646] connection open
+2023-08-14 04:07:55,622 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:07:55,622 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:07:55,622 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:07:55,622 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:07:55,622 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:07:55,622 [DEBUG] [server:292] < Sec-WebSocket-Key: q+NQne5lRjSIW6Re9iddyw==
+2023-08-14 04:07:55,622 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:07:55,622 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:07:55,622 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:07:55,623 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:07:55,623 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:07:55,623 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:07:55,623 [DEBUG] [server:313] > Sec-WebSocket-Accept: vabhFgiu2py8wXQcXnD7tdW9MZ0=
+2023-08-14 04:07:55,623 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:07:55,623 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:07:55 GMT
+2023-08-14 04:07:55,623 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:07:55,623 [INFO] [server:646] connection open
+2023-08-14 04:07:55,623 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:07:55,623 [DEBUG] [protocol:1168] < TEXT '{"message": "Hello, everyone!", "comment": "Thi...hYWFhYWFhYWFhYWFhYWE="}' [209 bytes]
+2023-08-14 04:07:55,624 [DEBUG] [protocol:1174] > TEXT '{"status": "error", "message": "No file uploaded."}' [51 bytes]
+2023-08-14 04:07:55,624 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:07:55,624 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:07:55,625 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:07:55,625 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:07:55,625 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:07:55,625 [INFO] [server:268] connection closed
+2023-08-14 04:08:15,638 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:08:15,638 [DEBUG] [protocol:1174] > PING 58 f5 cf be [binary, 4 bytes]
+2023-08-14 04:08:15,638 [DEBUG] [protocol:1168] < PING 25 61 8b f4 [binary, 4 bytes]
+2023-08-14 04:08:15,638 [DEBUG] [protocol:1174] > PONG 25 61 8b f4 [binary, 4 bytes]
+2023-08-14 04:08:15,639 [DEBUG] [protocol:1168] < PONG 58 f5 cf be [binary, 4 bytes]
+2023-08-14 04:08:15,639 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:08:35,646 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:08:35,646 [DEBUG] [protocol:1174] > PING ae d9 dc 46 [binary, 4 bytes]
+2023-08-14 04:08:35,647 [DEBUG] [protocol:1168] < PING '5\x1c>\x08' [text, 4 bytes]
+2023-08-14 04:08:35,647 [DEBUG] [protocol:1174] > PONG '5\x1c>\x08' [text, 4 bytes]
+2023-08-14 04:08:35,647 [DEBUG] [protocol:1168] < PONG ae d9 dc 46 [binary, 4 bytes]
+2023-08-14 04:08:35,647 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:08:55,659 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:08:55,659 [DEBUG] [protocol:1174] > PING 48 b1 dc 73 [binary, 4 bytes]
+2023-08-14 04:08:55,659 [DEBUG] [protocol:1168] < PING 25 d7 03 60 [binary, 4 bytes]
+2023-08-14 04:08:55,659 [DEBUG] [protocol:1174] > PONG 25 d7 03 60 [binary, 4 bytes]
+2023-08-14 04:08:55,660 [DEBUG] [protocol:1168] < PONG 48 b1 dc 73 [binary, 4 bytes]
+2023-08-14 04:08:55,660 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:09:15,672 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:09:15,672 [DEBUG] [protocol:1174] > PING 94 4a b9 ee [binary, 4 bytes]
+2023-08-14 04:09:15,672 [DEBUG] [protocol:1168] < PING 02 5b d4 cd [binary, 4 bytes]
+2023-08-14 04:09:15,673 [DEBUG] [protocol:1174] > PONG 02 5b d4 cd [binary, 4 bytes]
+2023-08-14 04:09:15,673 [DEBUG] [protocol:1168] < PONG 94 4a b9 ee [binary, 4 bytes]
+2023-08-14 04:09:15,673 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:09:35,684 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:09:35,684 [DEBUG] [protocol:1174] > PING 55 80 ee be [binary, 4 bytes]
+2023-08-14 04:09:35,685 [DEBUG] [protocol:1168] < PING a1 48 2d cb [binary, 4 bytes]
+2023-08-14 04:09:35,685 [DEBUG] [protocol:1174] > PONG a1 48 2d cb [binary, 4 bytes]
+2023-08-14 04:09:35,685 [DEBUG] [protocol:1168] < PONG 55 80 ee be [binary, 4 bytes]
+2023-08-14 04:09:35,685 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:09:55,687 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:09:55,687 [DEBUG] [protocol:1174] > PING fe 31 1a a7 [binary, 4 bytes]
+2023-08-14 04:09:55,687 [DEBUG] [protocol:1168] < PING e1 6f 7b 6a [binary, 4 bytes]
+2023-08-14 04:09:55,687 [DEBUG] [protocol:1174] > PONG e1 6f 7b 6a [binary, 4 bytes]
+2023-08-14 04:09:55,688 [DEBUG] [protocol:1168] < PONG fe 31 1a a7 [binary, 4 bytes]
+2023-08-14 04:09:55,688 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:10:15,695 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:10:15,695 [DEBUG] [protocol:1174] > PING 5f b0 31 f2 [binary, 4 bytes]
+2023-08-14 04:10:15,696 [DEBUG] [protocol:1168] < PING ec 2f 70 8f [binary, 4 bytes]
+2023-08-14 04:10:15,696 [DEBUG] [protocol:1174] > PONG ec 2f 70 8f [binary, 4 bytes]
+2023-08-14 04:10:15,696 [DEBUG] [protocol:1168] < PONG 5f b0 31 f2 [binary, 4 bytes]
+2023-08-14 04:10:15,696 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:10:35,708 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:10:35,708 [DEBUG] [protocol:1174] > PING 6a a7 b2 9e [binary, 4 bytes]
+2023-08-14 04:10:35,709 [DEBUG] [protocol:1168] < PING 77 fb 76 14 [binary, 4 bytes]
+2023-08-14 04:10:35,709 [DEBUG] [protocol:1174] > PONG 77 fb 76 14 [binary, 4 bytes]
+2023-08-14 04:10:35,709 [DEBUG] [protocol:1168] < PONG 6a a7 b2 9e [binary, 4 bytes]
+2023-08-14 04:10:35,709 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:10:55,716 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:10:55,716 [DEBUG] [protocol:1174] > PING a2 a5 54 58 [binary, 4 bytes]
+2023-08-14 04:10:55,716 [DEBUG] [protocol:1168] < PING f0 56 c7 c4 [binary, 4 bytes]
+2023-08-14 04:10:55,716 [DEBUG] [protocol:1174] > PONG f0 56 c7 c4 [binary, 4 bytes]
+2023-08-14 04:10:55,716 [DEBUG] [protocol:1168] < PONG a2 a5 54 58 [binary, 4 bytes]
+2023-08-14 04:10:55,717 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:11:15,720 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:11:15,720 [DEBUG] [protocol:1174] > PING 17 32 9e 61 [binary, 4 bytes]
+2023-08-14 04:11:15,721 [DEBUG] [protocol:1168] < PING '<u\x03v' [text, 4 bytes]
+2023-08-14 04:11:15,721 [DEBUG] [protocol:1174] > PONG '<u\x03v' [text, 4 bytes]
+2023-08-14 04:11:15,721 [DEBUG] [protocol:1168] < PONG 17 32 9e 61 [binary, 4 bytes]
+2023-08-14 04:11:15,721 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:11:29,514 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:11:29,514 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:11:29,514 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:11:29,514 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:11:29,515 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:11:29,515 [INFO] [server:268] connection closed
+2023-08-14 04:11:29,542 [INFO] [server:763] server closing
+2023-08-14 04:11:29,542 [INFO] [server:804] server closed
+2023-08-14 04:11:49,653 [DEBUG] [proactor_events:630] Using proactor: IocpProactor
+2023-08-14 04:11:49,679 [INFO] [server:711] server listening on 127.0.0.1:8000
+2023-08-14 04:11:55,096 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:11:55,097 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:11:55,097 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:11:55,097 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:11:55,097 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:11:55,097 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:11:55,097 [DEBUG] [server:292] < Sec-WebSocket-Key: AUZRHiQDUf1iiD24eafl6g==
+2023-08-14 04:11:55,097 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:11:55,097 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:11:55,097 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:11:55,098 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:11:55,098 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:11:55,098 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:11:55,098 [DEBUG] [server:313] > Sec-WebSocket-Accept: 2OYS3g5LGKKwIIP11vl+Eo8EED0=
+2023-08-14 04:11:55,098 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:11:55,098 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:11:55 GMT
+2023-08-14 04:11:55,098 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:11:55,098 [INFO] [server:646] connection open
+2023-08-14 04:11:55,098 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:11:55,099 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:11:55,099 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:11:55,099 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:11:55,099 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:11:55,099 [DEBUG] [server:292] < Sec-WebSocket-Key: ieNU5Oxh7R101Pfyx4cprA==
+2023-08-14 04:11:55,099 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:11:55,099 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:11:55,099 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:11:55,099 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:11:55,099 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:11:55,099 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:11:55,099 [DEBUG] [server:313] > Sec-WebSocket-Accept: gaa4hZdXrHuuo9sky7YtvIjSifw=
+2023-08-14 04:11:55,099 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:11:55,099 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:11:55 GMT
+2023-08-14 04:11:55,100 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:11:55,100 [INFO] [server:646] connection open
+2023-08-14 04:11:55,100 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:11:55,100 [DEBUG] [protocol:1168] < TEXT '{"message": "Hello, everyone!", "comment": "Thi...hYWFhYWFhYWFhYWFhYWE="}' [209 bytes]
+2023-08-14 04:11:55,101 [DEBUG] [protocol:1174] > TEXT '{"status": "error", "message": "No file uploaded."}' [51 bytes]
+2023-08-14 04:11:55,101 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:11:55,101 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:11:55,101 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:11:55,101 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:11:55,102 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:11:55,102 [INFO] [server:268] connection closed
+2023-08-14 04:12:15,110 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:12:15,110 [DEBUG] [protocol:1174] > PING '"C!6' [text, 4 bytes]
+2023-08-14 04:12:15,110 [DEBUG] [protocol:1168] < PING c3 e3 5d d6 [binary, 4 bytes]
+2023-08-14 04:12:15,111 [DEBUG] [protocol:1174] > PONG c3 e3 5d d6 [binary, 4 bytes]
+2023-08-14 04:12:15,111 [DEBUG] [protocol:1168] < PONG '"C!6' [text, 4 bytes]
+2023-08-14 04:12:15,111 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:12:35,118 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:12:35,118 [DEBUG] [protocol:1174] > PING e1 9f d2 4b [binary, 4 bytes]
+2023-08-14 04:12:35,119 [DEBUG] [protocol:1168] < PING 4d 5a 7d f3 [binary, 4 bytes]
+2023-08-14 04:12:35,119 [DEBUG] [protocol:1174] > PONG 4d 5a 7d f3 [binary, 4 bytes]
+2023-08-14 04:12:35,119 [DEBUG] [protocol:1168] < PONG e1 9f d2 4b [binary, 4 bytes]
+2023-08-14 04:12:35,119 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:12:50,533 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:12:50,534 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:12:50,534 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:12:50,534 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:12:50,534 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:12:50,534 [INFO] [server:268] connection closed
+2023-08-14 04:12:50,960 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:12:50,961 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:12:50,961 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:12:50,961 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:12:50,961 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:12:50,961 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:12:50,961 [DEBUG] [server:292] < Sec-WebSocket-Key: Q3I4E28atrcFEhP30Mbfyg==
+2023-08-14 04:12:50,961 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:12:50,961 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:12:50,961 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:12:50,962 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:12:50,962 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:12:50,962 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:12:50,962 [DEBUG] [server:313] > Sec-WebSocket-Accept: bWfK3RcnkPjRzIDSry2z3PzaWng=
+2023-08-14 04:12:50,962 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:12:50,962 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:12:50 GMT
+2023-08-14 04:12:50,962 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:12:50,962 [INFO] [server:646] connection open
+2023-08-14 04:12:50,962 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:12:50,962 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:12:50,962 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:12:50,962 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:12:50,962 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:12:50,963 [DEBUG] [server:292] < Sec-WebSocket-Key: aqphKt6+VJ8NUm03xIocgQ==
+2023-08-14 04:12:50,963 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:12:50,963 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:12:50,963 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:12:50,963 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:12:50,963 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:12:50,963 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:12:50,963 [DEBUG] [server:313] > Sec-WebSocket-Accept: MQa51TE/WlSNh2aL/LpMH1Po3rc=
+2023-08-14 04:12:50,963 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:12:50,963 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:12:50 GMT
+2023-08-14 04:12:50,963 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:12:50,963 [INFO] [server:646] connection open
+2023-08-14 04:12:50,963 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:12:50,963 [DEBUG] [protocol:1168] < TEXT '{"message": "Hello, everyone!", "comment": "Thi...hYWFhYWFhYWFhYWFhYWE="}' [209 bytes]
+2023-08-14 04:12:50,964 [DEBUG] [protocol:1174] > TEXT '{"status": "error", "message": "No file uploaded."}' [51 bytes]
+2023-08-14 04:12:50,964 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:12:50,964 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:12:50,964 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:12:50,964 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:12:50,964 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:12:50,964 [INFO] [server:268] connection closed
+2023-08-14 04:12:56,914 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:12:56,915 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:12:56,915 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:12:56,915 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:12:56,915 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:12:56,915 [INFO] [server:268] connection closed
+2023-08-14 04:12:56,944 [INFO] [server:763] server closing
+2023-08-14 04:12:56,944 [INFO] [server:804] server closed
+2023-08-14 04:13:32,930 [DEBUG] [proactor_events:630] Using proactor: IocpProactor
+2023-08-14 04:13:32,957 [INFO] [server:711] server listening on 127.0.0.1:8000
+2023-08-14 04:13:35,594 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:13:35,595 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:13:35,595 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:13:35,595 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:13:35,595 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:13:35,595 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:13:35,595 [DEBUG] [server:292] < Sec-WebSocket-Key: hJ9YbBSncGo6eac5D4RlTA==
+2023-08-14 04:13:35,595 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:13:35,596 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:13:35,596 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:13:35,596 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:13:35,596 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:13:35,596 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:13:35,596 [DEBUG] [server:313] > Sec-WebSocket-Accept: 745iF0f2KRBybDBsR1J+ohjymT8=
+2023-08-14 04:13:35,596 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:13:35,596 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:13:35 GMT
+2023-08-14 04:13:35,596 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:13:35,596 [INFO] [server:646] connection open
+2023-08-14 04:13:35,596 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:13:35,597 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:13:35,597 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:13:35,597 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:13:35,597 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:13:35,597 [DEBUG] [server:292] < Sec-WebSocket-Key: ZfRXfsmbZZLtQXTywmw5xA==
+2023-08-14 04:13:35,597 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:13:35,597 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:13:35,597 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:13:35,597 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:13:35,597 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:13:35,597 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:13:35,597 [DEBUG] [server:313] > Sec-WebSocket-Accept: wayP1+35fI6RmobmkFai+no8zug=
+2023-08-14 04:13:35,597 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:13:35,597 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:13:35 GMT
+2023-08-14 04:13:35,597 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:13:35,597 [INFO] [server:646] connection open
+2023-08-14 04:13:35,598 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:13:35,598 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:13:35,599 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:13:35,599 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:13:35,599 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:13:35,599 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:13:35,599 [INFO] [server:268] connection closed
+2023-08-14 04:13:35,599 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:13:35,599 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:13:35,599 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:13:35,600 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:13:35,600 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:13:35,600 [INFO] [server:268] connection closed
+2023-08-14 04:13:58,331 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:13:58,331 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:13:58,331 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:13:58,332 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:13:58,332 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:13:58,332 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:13:58,332 [DEBUG] [server:292] < Sec-WebSocket-Key: L6RO2XMa52zyqBB9a8WsQQ==
+2023-08-14 04:13:58,332 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:13:58,332 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:13:58,332 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:13:58,332 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:13:58,332 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:13:58,332 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:13:58,332 [DEBUG] [server:313] > Sec-WebSocket-Accept: b9ZFRZFJA/8mdLg3ZSP8RSRMTEs=
+2023-08-14 04:13:58,332 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:13:58,332 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:13:58 GMT
+2023-08-14 04:13:58,332 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:13:58,332 [INFO] [server:646] connection open
+2023-08-14 04:13:58,332 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:13:58,333 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:13:58,333 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:13:58,333 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:13:58,333 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:13:58,333 [DEBUG] [server:292] < Sec-WebSocket-Key: pF+f0kmH7MRuT3227lt5bQ==
+2023-08-14 04:13:58,333 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:13:58,333 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:13:58,333 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:13:58,333 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:13:58,333 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:13:58,333 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:13:58,333 [DEBUG] [server:313] > Sec-WebSocket-Accept: xu8hxaFWYtvOIEKf7915rcfZEhI=
+2023-08-14 04:13:58,333 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:13:58,333 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:13:58 GMT
+2023-08-14 04:13:58,333 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:13:58,333 [INFO] [server:646] connection open
+2023-08-14 04:13:58,333 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:13:58,334 [DEBUG] [protocol:1168] < TEXT '{"message": "Hello, everyone!", "comment": "Thi...hYWFhYWFhYWFhYWFhYWE="}' [209 bytes]
+2023-08-14 04:13:58,334 [DEBUG] [protocol:1174] > TEXT '{"status": "error", "message": "No file uploaded."}' [51 bytes]
+2023-08-14 04:13:58,334 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:13:58,334 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:13:58,334 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:13:58,335 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:13:58,335 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:13:58,335 [INFO] [server:268] connection closed
+2023-08-14 04:14:18,350 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:14:18,350 [DEBUG] [protocol:1174] > PING 20 e0 5c 60 [binary, 4 bytes]
+2023-08-14 04:14:18,351 [DEBUG] [protocol:1168] < PING 54 b6 37 b6 [binary, 4 bytes]
+2023-08-14 04:14:18,351 [DEBUG] [protocol:1174] > PONG 54 b6 37 b6 [binary, 4 bytes]
+2023-08-14 04:14:18,351 [DEBUG] [protocol:1168] < PONG 20 e0 5c 60 [binary, 4 bytes]
+2023-08-14 04:14:18,351 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:14:38,365 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:14:38,365 [DEBUG] [protocol:1174] > PING 1f 54 80 7e [binary, 4 bytes]
+2023-08-14 04:14:38,365 [DEBUG] [protocol:1168] < PING d5 4c 84 f5 [binary, 4 bytes]
+2023-08-14 04:14:38,365 [DEBUG] [protocol:1174] > PONG d5 4c 84 f5 [binary, 4 bytes]
+2023-08-14 04:14:38,366 [DEBUG] [protocol:1168] < PONG 1f 54 80 7e [binary, 4 bytes]
+2023-08-14 04:14:38,366 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:14:58,381 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:14:58,381 [DEBUG] [protocol:1174] > PING 4e a7 4a 66 [binary, 4 bytes]
+2023-08-14 04:14:58,381 [DEBUG] [protocol:1168] < PING 92 ea f4 4d [binary, 4 bytes]
+2023-08-14 04:14:58,382 [DEBUG] [protocol:1174] > PONG 92 ea f4 4d [binary, 4 bytes]
+2023-08-14 04:14:58,382 [DEBUG] [protocol:1168] < PONG 4e a7 4a 66 [binary, 4 bytes]
+2023-08-14 04:14:58,382 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:15:18,382 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:15:18,382 [DEBUG] [protocol:1174] > PING f7 81 5a 52 [binary, 4 bytes]
+2023-08-14 04:15:18,382 [DEBUG] [protocol:1168] < PING 61 2a da 0b [binary, 4 bytes]
+2023-08-14 04:15:18,383 [DEBUG] [protocol:1174] > PONG 61 2a da 0b [binary, 4 bytes]
+2023-08-14 04:15:18,383 [DEBUG] [protocol:1168] < PONG f7 81 5a 52 [binary, 4 bytes]
+2023-08-14 04:15:18,383 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:15:38,398 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:15:38,398 [DEBUG] [protocol:1174] > PING de ce ef 38 [binary, 4 bytes]
+2023-08-14 04:15:38,398 [DEBUG] [protocol:1168] < PING 7e f8 6a c5 [binary, 4 bytes]
+2023-08-14 04:15:38,398 [DEBUG] [protocol:1174] > PONG 7e f8 6a c5 [binary, 4 bytes]
+2023-08-14 04:15:38,398 [DEBUG] [protocol:1168] < PONG de ce ef 38 [binary, 4 bytes]
+2023-08-14 04:15:38,399 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:15:58,406 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:15:58,406 [DEBUG] [protocol:1174] > PING 7a 62 cc ff [binary, 4 bytes]
+2023-08-14 04:15:58,406 [DEBUG] [protocol:1168] < PING 71 4e 5e 94 [binary, 4 bytes]
+2023-08-14 04:15:58,406 [DEBUG] [protocol:1174] > PONG 71 4e 5e 94 [binary, 4 bytes]
+2023-08-14 04:15:58,407 [DEBUG] [protocol:1168] < PONG 7a 62 cc ff [binary, 4 bytes]
+2023-08-14 04:15:58,407 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:16:18,407 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:16:18,407 [DEBUG] [protocol:1174] > PING '\x0f&yy' [text, 4 bytes]
+2023-08-14 04:16:18,407 [DEBUG] [protocol:1168] < PING 80 3d fe 8d [binary, 4 bytes]
+2023-08-14 04:16:18,407 [DEBUG] [protocol:1174] > PONG 80 3d fe 8d [binary, 4 bytes]
+2023-08-14 04:16:18,407 [DEBUG] [protocol:1168] < PONG '\x0f&yy' [text, 4 bytes]
+2023-08-14 04:16:18,408 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:16:38,407 [DEBUG] [protocol:1168] < PING 53 56 dd 6b [binary, 4 bytes]
+2023-08-14 04:16:38,407 [DEBUG] [protocol:1174] > PONG 53 56 dd 6b [binary, 4 bytes]
+2023-08-14 04:16:38,407 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:16:38,407 [DEBUG] [protocol:1174] > PING 17 72 be ee [binary, 4 bytes]
+2023-08-14 04:16:38,408 [DEBUG] [protocol:1168] < PONG 17 72 be ee [binary, 4 bytes]
+2023-08-14 04:16:38,408 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:16:58,418 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:16:58,418 [DEBUG] [protocol:1174] > PING fa 54 a2 0c [binary, 4 bytes]
+2023-08-14 04:16:58,418 [DEBUG] [protocol:1168] < PING 4a 2b 37 82 [binary, 4 bytes]
+2023-08-14 04:16:58,418 [DEBUG] [protocol:1174] > PONG 4a 2b 37 82 [binary, 4 bytes]
+2023-08-14 04:16:58,418 [DEBUG] [protocol:1168] < PONG fa 54 a2 0c [binary, 4 bytes]
+2023-08-14 04:16:58,419 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:17:18,428 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:17:18,428 [DEBUG] [protocol:1174] > PING 72 c9 c5 f5 [binary, 4 bytes]
+2023-08-14 04:17:18,428 [DEBUG] [protocol:1168] < PING b3 56 1c dd [binary, 4 bytes]
+2023-08-14 04:17:18,429 [DEBUG] [protocol:1174] > PONG b3 56 1c dd [binary, 4 bytes]
+2023-08-14 04:17:18,429 [DEBUG] [protocol:1168] < PONG 72 c9 c5 f5 [binary, 4 bytes]
+2023-08-14 04:17:18,429 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:17:38,437 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:17:38,437 [DEBUG] [protocol:1174] > PING 5c a2 c1 b6 [binary, 4 bytes]
+2023-08-14 04:17:38,437 [DEBUG] [protocol:1168] < PING b3 fc f1 c6 [binary, 4 bytes]
+2023-08-14 04:17:38,438 [DEBUG] [protocol:1174] > PONG b3 fc f1 c6 [binary, 4 bytes]
+2023-08-14 04:17:38,438 [DEBUG] [protocol:1168] < PONG 5c a2 c1 b6 [binary, 4 bytes]
+2023-08-14 04:17:38,438 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:17:58,444 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:17:58,444 [DEBUG] [protocol:1174] > PING 8a 0c 46 86 [binary, 4 bytes]
+2023-08-14 04:17:58,445 [DEBUG] [protocol:1168] < PING ';(]d' [text, 4 bytes]
+2023-08-14 04:17:58,445 [DEBUG] [protocol:1174] > PONG ';(]d' [text, 4 bytes]
+2023-08-14 04:17:58,445 [DEBUG] [protocol:1168] < PONG 8a 0c 46 86 [binary, 4 bytes]
+2023-08-14 04:17:58,445 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:18:18,450 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:18:18,451 [DEBUG] [protocol:1174] > PING 7a 80 02 1c [binary, 4 bytes]
+2023-08-14 04:18:18,451 [DEBUG] [protocol:1168] < PING 1c 35 37 de [binary, 4 bytes]
+2023-08-14 04:18:18,451 [DEBUG] [protocol:1174] > PONG 1c 35 37 de [binary, 4 bytes]
+2023-08-14 04:18:18,451 [DEBUG] [protocol:1168] < PONG 7a 80 02 1c [binary, 4 bytes]
+2023-08-14 04:18:18,451 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:18:35,815 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:18:35,815 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:18:35,815 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:18:35,815 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:18:35,815 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:18:35,816 [INFO] [server:268] connection closed
+2023-08-14 04:18:35,843 [INFO] [server:763] server closing
+2023-08-14 04:18:35,843 [INFO] [server:804] server closed
+2023-08-14 04:20:23,842 [DEBUG] [proactor_events:630] Using proactor: IocpProactor
+2023-08-14 04:20:23,870 [INFO] [server:711] server listening on 127.0.0.1:8000
+2023-08-14 04:20:27,181 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:20:27,182 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:20:27,182 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:20:27,182 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:20:27,182 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:20:27,182 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:20:27,182 [DEBUG] [server:292] < Sec-WebSocket-Key: p5m1ttYDsanHfDVGT56k2A==
+2023-08-14 04:20:27,182 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:20:27,182 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:20:27,183 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:20:27,183 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:20:27,183 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:20:27,183 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:20:27,183 [DEBUG] [server:313] > Sec-WebSocket-Accept: d7INVv653MJnpro22e0eS9JAZIM=
+2023-08-14 04:20:27,183 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:20:27,183 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:20:27 GMT
+2023-08-14 04:20:27,183 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:20:27,183 [INFO] [server:646] connection open
+2023-08-14 04:20:27,183 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:20:27,184 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:20:27,184 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:20:27,184 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:20:27,184 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:20:27,184 [DEBUG] [server:292] < Sec-WebSocket-Key: f9Lqp3kGNtG+yzLlcBgGew==
+2023-08-14 04:20:27,184 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:20:27,184 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:20:27,184 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:20:27,184 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:20:27,184 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:20:27,184 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:20:27,184 [DEBUG] [server:313] > Sec-WebSocket-Accept: EG88ejpv7M4/31AXkz6dXrMeYvs=
+2023-08-14 04:20:27,184 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:20:27,184 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:20:27 GMT
+2023-08-14 04:20:27,185 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:20:27,185 [INFO] [server:646] connection open
+2023-08-14 04:20:27,185 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:20:27,185 [DEBUG] [protocol:1168] < TEXT '{"message": "Hello, everyone!", "comment": "Thi...hYWFhYWFhYWFhYWFhYWE="}' [209 bytes]
+2023-08-14 04:20:27,186 [DEBUG] [protocol:1174] > TEXT '{"status": "success", "message": "File uploaded successfully."}' [63 bytes]
+2023-08-14 04:20:27,186 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:20:27,186 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:20:27,186 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:20:27,186 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:20:27,186 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:20:27,187 [INFO] [server:268] connection closed
+2023-08-14 04:20:47,188 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:20:47,188 [DEBUG] [protocol:1174] > PING af b0 91 90 [binary, 4 bytes]
+2023-08-14 04:20:47,188 [DEBUG] [protocol:1168] < PING 0e 21 0d bd [binary, 4 bytes]
+2023-08-14 04:20:47,189 [DEBUG] [protocol:1174] > PONG 0e 21 0d bd [binary, 4 bytes]
+2023-08-14 04:20:47,189 [DEBUG] [protocol:1168] < PONG af b0 91 90 [binary, 4 bytes]
+2023-08-14 04:20:47,189 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:21:07,205 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:21:07,205 [DEBUG] [protocol:1174] > PING 32 f4 0a 4d [binary, 4 bytes]
+2023-08-14 04:21:07,205 [DEBUG] [protocol:1168] < PING '5i\x7f\t' [text, 4 bytes]
+2023-08-14 04:21:07,205 [DEBUG] [protocol:1174] > PONG '5i\x7f\t' [text, 4 bytes]
+2023-08-14 04:21:07,205 [DEBUG] [protocol:1168] < PONG 32 f4 0a 4d [binary, 4 bytes]
+2023-08-14 04:21:07,205 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:21:20,570 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:21:20,570 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:21:20,570 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:21:20,570 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:21:20,570 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:21:20,571 [INFO] [server:268] connection closed
+2023-08-14 04:21:20,600 [INFO] [server:763] server closing
+2023-08-14 04:21:20,600 [INFO] [server:804] server closed
+2023-08-14 04:26:14,563 [DEBUG] [proactor_events:630] Using proactor: IocpProactor
+2023-08-14 04:26:14,591 [INFO] [server:711] server listening on 127.0.0.1:8000
+2023-08-14 04:26:20,327 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:26:20,328 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:26:20,328 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:26:20,328 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:26:20,328 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:26:20,328 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:26:20,328 [DEBUG] [server:292] < Sec-WebSocket-Key: PpmB0QRrFKEQ18mY8PEs9Q==
+2023-08-14 04:26:20,328 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:26:20,328 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:26:20,329 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:26:20,329 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:26:20,329 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:26:20,329 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:26:20,329 [DEBUG] [server:313] > Sec-WebSocket-Accept: uyr8MB+IsLSXckpRaGV+B9v1zvw=
+2023-08-14 04:26:20,329 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:26:20,329 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:26:20 GMT
+2023-08-14 04:26:20,329 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:26:20,329 [INFO] [server:646] connection open
+2023-08-14 04:26:20,329 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:26:20,330 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:26:20,330 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:26:20,330 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:26:20,330 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:26:20,330 [DEBUG] [server:292] < Sec-WebSocket-Key: hcd6Ta9LMMV83I9xP+iZ4w==
+2023-08-14 04:26:20,330 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:26:20,330 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:26:20,330 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:26:20,330 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:26:20,330 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:26:20,330 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:26:20,330 [DEBUG] [server:313] > Sec-WebSocket-Accept: vsYDcPloxS41Tl8gkGA58wHSWUE=
+2023-08-14 04:26:20,330 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:26:20,330 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:26:20 GMT
+2023-08-14 04:26:20,330 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:26:20,330 [INFO] [server:646] connection open
+2023-08-14 04:26:20,331 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:26:20,331 [DEBUG] [protocol:1168] < TEXT '{"message": "Hello, everyone!", "comment": "Thi...hYWFhYWFhYWFhYWFhYWE="}' [209 bytes]
+2023-08-14 04:26:20,332 [DEBUG] [protocol:1174] > TEXT '{"status": "success", "message": "File uploaded successfully."}' [63 bytes]
+2023-08-14 04:26:20,332 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:26:20,332 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:26:20,332 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:26:20,332 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:26:20,332 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:26:20,333 [INFO] [server:268] connection closed
+2023-08-14 04:26:40,329 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:26:40,329 [DEBUG] [protocol:1174] > PING 39 5a 85 9f [binary, 4 bytes]
+2023-08-14 04:26:40,330 [DEBUG] [protocol:1168] < PONG 39 5a 85 9f [binary, 4 bytes]
+2023-08-14 04:26:40,330 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:26:40,330 [DEBUG] [protocol:1168] < PING 7e 82 09 0f [binary, 4 bytes]
+2023-08-14 04:26:40,330 [DEBUG] [protocol:1174] > PONG 7e 82 09 0f [binary, 4 bytes]
+2023-08-14 04:27:00,343 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:27:00,343 [DEBUG] [protocol:1174] > PING f5 bd 57 3a [binary, 4 bytes]
+2023-08-14 04:27:00,344 [DEBUG] [protocol:1168] < PING c6 61 5b a0 [binary, 4 bytes]
+2023-08-14 04:27:00,344 [DEBUG] [protocol:1174] > PONG c6 61 5b a0 [binary, 4 bytes]
+2023-08-14 04:27:00,344 [DEBUG] [protocol:1168] < PONG f5 bd 57 3a [binary, 4 bytes]
+2023-08-14 04:27:00,344 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:27:20,355 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:27:20,355 [DEBUG] [protocol:1174] > PING ea 43 f4 10 [binary, 4 bytes]
+2023-08-14 04:27:20,356 [DEBUG] [protocol:1168] < PING 27 8d 86 a1 [binary, 4 bytes]
+2023-08-14 04:27:20,356 [DEBUG] [protocol:1174] > PONG 27 8d 86 a1 [binary, 4 bytes]
+2023-08-14 04:27:20,356 [DEBUG] [protocol:1168] < PONG ea 43 f4 10 [binary, 4 bytes]
+2023-08-14 04:27:20,356 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:27:40,369 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:27:40,369 [DEBUG] [protocol:1174] > PING e8 04 46 c8 [binary, 4 bytes]
+2023-08-14 04:27:40,370 [DEBUG] [protocol:1168] < PING 8d b0 20 70 [binary, 4 bytes]
+2023-08-14 04:27:40,370 [DEBUG] [protocol:1174] > PONG 8d b0 20 70 [binary, 4 bytes]
+2023-08-14 04:27:40,370 [DEBUG] [protocol:1168] < PONG e8 04 46 c8 [binary, 4 bytes]
+2023-08-14 04:27:40,370 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:28:00,379 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:28:00,379 [DEBUG] [protocol:1174] > PING ad 6b 29 e4 [binary, 4 bytes]
+2023-08-14 04:28:00,379 [DEBUG] [protocol:1168] < PING b7 58 fb e8 [binary, 4 bytes]
+2023-08-14 04:28:00,380 [DEBUG] [protocol:1174] > PONG b7 58 fb e8 [binary, 4 bytes]
+2023-08-14 04:28:00,380 [DEBUG] [protocol:1168] < PONG ad 6b 29 e4 [binary, 4 bytes]
+2023-08-14 04:28:00,380 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:28:20,394 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:28:20,394 [DEBUG] [protocol:1174] > PING ae 7f d3 9e [binary, 4 bytes]
+2023-08-14 04:28:20,394 [DEBUG] [protocol:1168] < PING db fb ee 29 [binary, 4 bytes]
+2023-08-14 04:28:20,394 [DEBUG] [protocol:1174] > PONG db fb ee 29 [binary, 4 bytes]
+2023-08-14 04:28:20,394 [DEBUG] [protocol:1168] < PONG ae 7f d3 9e [binary, 4 bytes]
+2023-08-14 04:28:20,394 [DEBUG] [protocol:1268] % received keepalive pong
+2023-08-14 04:28:38,909 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:28:38,909 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:28:38,909 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:28:38,909 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:28:38,909 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:28:38,910 [INFO] [server:268] connection closed
+2023-08-14 04:28:38,938 [INFO] [server:763] server closing
+2023-08-14 04:28:38,938 [INFO] [server:804] server closed
+2023-08-14 04:42:10,698 [DEBUG] [proactor_events:630] Using proactor: IocpProactor
+2023-08-14 04:42:45,815 [DEBUG] [proactor_events:630] Using proactor: IocpProactor
+2023-08-14 04:42:45,841 [INFO] [server:711] server listening on 127.0.0.1:8000
+2023-08-14 04:42:55,197 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:42:55,198 [DEBUG] [protocol:255] = connection is CONNECTING
+2023-08-14 04:42:55,198 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:42:55,198 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:42:55,198 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:42:55,198 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:42:55,198 [DEBUG] [server:292] < Sec-WebSocket-Key: a62PW2f7UShZ0fpzLXNVkQ==
+2023-08-14 04:42:55,198 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:42:55,198 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:42:55,199 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:42:55,199 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:42:55,199 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:42:55,199 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:42:55,199 [DEBUG] [server:313] > Sec-WebSocket-Accept: zgiLRRHUtN21mdeyrz4MvsChjro=
+2023-08-14 04:42:55,199 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:42:55,199 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:42:55 GMT
+2023-08-14 04:42:55,199 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:42:55,199 [INFO] [server:646] connection open
+2023-08-14 04:42:55,199 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:42:55,200 [DEBUG] [server:290] < GET /connect HTTP/1.1
+2023-08-14 04:42:55,200 [DEBUG] [server:292] < Host: 127.0.0.1:8000
+2023-08-14 04:42:55,200 [DEBUG] [server:292] < Upgrade: websocket
+2023-08-14 04:42:55,200 [DEBUG] [server:292] < Connection: Upgrade
+2023-08-14 04:42:55,200 [DEBUG] [server:292] < Sec-WebSocket-Key: rfpnU6xq2qJ/9NLCS8bwMA==
+2023-08-14 04:42:55,200 [DEBUG] [server:292] < Sec-WebSocket-Version: 13
+2023-08-14 04:42:55,200 [DEBUG] [server:292] < Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+2023-08-14 04:42:55,200 [DEBUG] [server:292] < User-Agent: Python/3.10 websockets/11.0.3
+2023-08-14 04:42:55,200 [DEBUG] [server:311] > HTTP/1.1 101 Switching Protocols
+2023-08-14 04:42:55,200 [DEBUG] [server:313] > Upgrade: websocket
+2023-08-14 04:42:55,200 [DEBUG] [server:313] > Connection: Upgrade
+2023-08-14 04:42:55,200 [DEBUG] [server:313] > Sec-WebSocket-Accept: rho0dXjDkUR4Lw7ZqI2m4G9sli8=
+2023-08-14 04:42:55,200 [DEBUG] [server:313] > Sec-WebSocket-Extensions: permessage-deflate; server_max_window_bits=12; client_max_window_bits=12
+2023-08-14 04:42:55,200 [DEBUG] [server:313] > Date: Mon, 14 Aug 2023 01:42:55 GMT
+2023-08-14 04:42:55,200 [DEBUG] [server:313] > Server: Python/3.10 websockets/11.0.3
+2023-08-14 04:42:55,200 [INFO] [server:646] connection open
+2023-08-14 04:42:55,201 [DEBUG] [protocol:356] = connection is OPEN
+2023-08-14 04:42:55,201 [DEBUG] [protocol:1168] < TEXT '{"message": "Hello, everyone!", "comment": "Thi...hYWFhYWFhYWFhYWFhYWE="}' [209 bytes]
+2023-08-14 04:42:55,202 [DEBUG] [protocol:1174] > TEXT '{"status": "success", "message": "File uploaded successfully."}' [63 bytes]
+2023-08-14 04:42:55,202 [DEBUG] [protocol:1168] < CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:42:55,202 [DEBUG] [protocol:1223] = connection is CLOSING
+2023-08-14 04:42:55,202 [DEBUG] [protocol:1174] > CLOSE 1000 (OK) [2 bytes]
+2023-08-14 04:42:55,202 [DEBUG] [protocol:1320] x half-closing TCP connection
+2023-08-14 04:42:55,202 [DEBUG] [protocol:1494] = connection is CLOSED
+2023-08-14 04:42:55,203 [INFO] [server:268] connection closed
+2023-08-14 04:43:15,204 [DEBUG] [protocol:1261] % sending keepalive ping
+2023-08-14 04:43:15,204 [DEBUG] [protocol:1174] > PING e0 04 d7 9d [binary, 4 bytes]
+2023-08-14 04:43:15,205 [DEBUG] [protocol:1168] < PING 78 1a c5 72 [binary, 4 bytes]
+2023-08-14 04:43:15,205 [DEBUG] [protocol:1174] > PONG 78 1a c5 72 [binary, 4 bytes]
+2023-08-14 04:43:15,205 [DEBUG] [protocol:1168] < PONG e0 04 d7 9d [binary, 4 bytes]
+2023-08-14 04:43:15,205 [DEBUG] [protocol:1268] % received keepalive pong
