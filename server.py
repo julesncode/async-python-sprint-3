@@ -1,6 +1,7 @@
 import json
 import time
 from typing import List, Dict
+from collections import OrderedDict
 
 import websockets
 
@@ -20,7 +21,7 @@ class Comment:
 class Chat:
     def __init__(self, max_messages: int = 20, message_lifetime: int = 3600,
                  max_message_size: int = 5 * 1024 * 1024, ban_duration: int = 4 * 3600):
-        self.messages = []
+        self.messages = OrderedDict()
         self.clients = set()
         self.max_messages = max_messages
         self.message_lifetime = message_lifetime
@@ -36,15 +37,28 @@ class Chat:
 
     def add_message(self, message: str, sender: str):
         timestamp = int(time.time())
-        self.messages.append({"message": message, "sender": sender, "comments": [], "timestamp": timestamp})
-        self.cleanup_messages()
+        message_data = {"sender": sender, "comments": [], "timestamp": timestamp}
+        if not self.is_user_banned(sender):
+            self.messages[message] = message_data
+            self.cleanup_messages()
 
-    def get_messages(self, n: int = 20) -> List[Dict]:
-        return self.messages[-n:]
+    def get_messages(self, n: int = 20) -> OrderedDict:
+        messages = OrderedDict()
+        for key in list(self.messages.keys())[-n:]:
+            messages[key] = self.messages[key]
+        return messages
 
     def cleanup_messages(self):
         current_time = int(time.time())
-        self.messages = [msg for msg in self.messages if current_time - msg["timestamp"] <= self.message_lifetime]
+        self.messages = OrderedDict((key, value) for key, value in self.messages.items() if
+                                    current_time - value["timestamp"] <= self.message_lifetime)
+
+        if len(self.messages) > self.max_messages:
+            messages = OrderedDict()
+            for key in list(self.messages.keys())[-self.max_messages:]:
+                messages[key] = self.messages[key]
+            self.messages = messages
+
 
     def is_user_banned(self, user: str) -> bool:
         ban_time = self.user_reports.get(user, 0)
@@ -66,14 +80,10 @@ class Chat:
         if message in self.messages:
             if not self.is_user_banned(sender):
                 self.messages[message]["comments"].append(Comment(comment_text, sender))
-            self.messages[message]["comments"].append(Comment(comment_text, sender))
+
         else:
             # Handle an invalid message index here, such as logging a warning or ignoring the comment
             print("Invalid message index:", message)
-
-    def cleanup_messages(self):
-        current_time = int(time.time())
-        self.messages = [msg for msg in self.messages if current_time - msg["timestamp"] <= config.MESSAGE_LIFETIME]
 
     async def handle_upload(self, ws, data):
         file = data.get("file_upload", False)
